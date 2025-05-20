@@ -9,8 +9,8 @@ use std::{
     task::Context,
     time::Duration,
 };
-// The timer we wrote in the previous section:
-use timer_future::TimerFuture;
+
+use timer_tutorial10_adpro::TimerFuture;
 
 /// Task executor that receives tasks off of a channel and runs them.
 struct Executor {
@@ -105,6 +105,7 @@ fn main() {
         println!("Rayhan's Komputer: done!");
     });
 
+    println!("Rayhan's Komputer: hey hey");
     // Drop the spawner so that our executor knows it is finished and won't
     // receive more incoming tasks to run.
     drop(spawner);
